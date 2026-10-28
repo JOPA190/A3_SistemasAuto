@@ -56,7 +56,7 @@ O projeto opera em uma arquitetura integrada de 4 etapas (Sensoriamento, Process
 ## 🚀 Como Executar o Projeto
 
 ### 1. Configuração do Arduino
-1. Abra o arquivo `controle_acesso.ino` na **Arduino IDE**.
+1. Abra o arquivo `Arduino.c++` na **Arduino IDE**.
 2. Instale a biblioteca **LiquidCrystal I2C** (por *Frank de Brabander*) no Gerenciador de Bibliotecas.
 3. Selecione a placa **Arduino Uno** e a respectiva porta COM, e faça o upload do código.
 4. *(Importante)* Feche o Monitor Serial da Arduino IDE após o upload para liberar a porta COM para o Python.
@@ -76,7 +76,7 @@ O projeto opera em uma arquitetura integrada de 4 etapas (Sensoriamento, Process
 ### 3. Simulação do Circuito (Wokwi)
 O repositório inclui o arquivo `diagram.json` contendo o mapeamento elétrico completo. Para simular:
 1. Acesse o simulador [Wokwi](https://wokwi.com/).
-2. Crie um projeto para **Arduino Uno**, cole o conteúdo de `controle_acesso.ino` na aba principal e substitua o conteúdo da aba `diagram.json` pelo arquivo deste repositório.
+2. Crie um projeto para **Arduino Uno**, cole o conteúdo de `Arduino.c++` na aba principal e substitua o conteúdo da aba `diagram.json` pelo arquivo deste repositório.
 
 ---
 
