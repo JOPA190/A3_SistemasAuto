@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "João Carlos Oliveira Passos",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 120, "left": 20, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -40, "left": 60, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": -40, "left": 180, "attrs": {} },
+    { "type": "wokwi-buzzer", "id": "bz1", "top": -50, "left": 320, "attrs": { "volume": "0.1" } },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 130,
+      "left": 340,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "pir1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "pir1:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "pir1:OUT", "uno:2", "green", [ "v0" ] ],
+    [ "relay1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "relay1:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "relay1:IN", "uno:3", "orange", [ "v0" ] ],
+    [ "bz1:1", "uno:GND.1", "black", [ "v0" ] ],
+    [ "bz1:2", "uno:4", "purple", [ "v0" ] ],
+    [ "lcd1:GND", "uno:GND.2", "black", [ "h-20", "v100" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h-30", "v110" ] ],
+    [ "lcd1:SDA", "uno:A4", "blue", [ "h-40", "v120" ] ],
+    [ "lcd1:SCL", "uno:A5", "yellow", [ "h-50", "v130" ] ]
+  ],
+  "dependencies": {}
+}
